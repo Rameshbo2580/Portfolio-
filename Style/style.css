@@ -1,0 +1,102 @@
+body{
+    margin-left: 1cm;
+    margin-right: 1.7cm;
+    background-color:rgba(4, 22, 43, 0.726);
+}
+.navBar {
+    margin-left: 480px; 
+    margin-bottom: 5%;
+}  
+ul {
+    text-align: center;
+    font-size: 23px;
+    margin-top: 0px;
+}
+ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 50px;
+}
+ul li a {
+    text-decoration: none;
+    color: black; 
+}
+ul li a:hover {
+    color: rgb(0, 240, 44); 
+}
+
+.image {
+    position: absolute;
+    height: 400px;
+    width: auto;
+    display: inline-block;
+    position: relative;
+    left: 10%;
+    top: 50px;
+    border-radius: 20px; 
+    z-index: 2;
+
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.5),
+                0 0 60px rgba(0, 255, 255, 0.3),
+                0 0 90px rgba(0, 255, 255, 0.2);
+}
+
+@keyframes haloGlow {
+    0% { box-shadow: 0 0 30px rgba(0,255,255,0.5), 0 0 60px rgba(0,255,255,0.3), 0 0 90px rgba(0,255,255,0.2); }
+    50% { box-shadow: 0 0 50px rgba(0,255,255,0.7), 0 0 80px rgba(0,255,255,0.5), 0 0 110px rgba(0,255,255,0.3); }
+    100% { box-shadow: 0 0 30px rgba(0,255,255,0.5), 0 0 60px rgba(0,255,255,0.3), 0 0 90px rgba(0,255,255,0.2); }
+}
+
+.image {
+    animation: haloGlow 5s ease-in-out infinite;
+}
+
+.intro{
+    font-size: 50PX;
+    font-style:bold;
+    display: inline;
+    position: relative;
+    left:470px;
+    bottom: 290px;
+}
+.hobie{
+    font-size: 40px;
+    font-style: bold;
+    display: inline;
+    position: relative;
+    bottom: 190px;
+}
+.paragraph{
+    font-size: 25px;
+    height: 30px;
+    width: 60%;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: 50px;
+    line-height: 1.5;
+    position: relative;
+    top: -160px;   
+}
+.hire {
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;  
+    line-height: 40px;     
+    background-color: yellow;
+    position: relative;
+    left: 1040px;    
+    top:50px; 
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;  
+    border: none;      
+}
+.logo{
+   display: inline;
+   position: relative;
+   right:400px;
+   top: 50px;
+   font-size: 25px;
+   font-style: oblique;
+   color: rgb(239, 169, 5);
+}
