@@ -11,21 +11,23 @@ body {
     margin-left: 480px;
     margin-bottom: 5%;
 }
-ul {
+.homeUl{
     text-align: center;
     font-size: 23px;
     margin-top: 0px;
 }
-ul li {
+.homeUl li {
     list-style-type: none;
     display: inline-block;
     margin: 0 50px;
+    position: relative;
+    right: 9%;
 }
-ul li a {
+.homeUl li a {
     text-decoration: none;
     color: black;
 }
-ul li a:hover {
+.homeUl li a:hover {
     color: rgb(0, 240, 44);
 }
 .image {
@@ -76,8 +78,8 @@ ul li a:hover {
 .paragraph {
     font-size: 25px;
     height: 30px;
-    width: 60%;
-    text-align: justify;
+    width: 65%;
+    text-align: left;
     margin-left: auto;
     margin-right: 50px;
     line-height: 1.5;
@@ -91,14 +93,16 @@ ul li a:hover {
     line-height: 40px;
     background-color: yellow;
     position: relative;
-    left: 930px;
+    left: 850px;
     top: -10px;
     font-size: 20px;
     cursor: pointer;
     text-align: center;
     border: none;
 }
-
+.hire:hover{
+    background-color: rgb(23, 230, 23);
+}
 .logo {
     display: inline;
     position: relative;
@@ -106,46 +110,60 @@ ul li a:hover {
     font-style: oblique;
     color: rgb(239, 169, 5);
 }
-.image2 {
-    position: absolute;
-    height: 400px;
-    width: auto;
-    display: inline-block;
+.aboutphoto img {
+    object-position: top;
     position: relative;
-    left: 70%;
-    top: -20%;
-    border-radius: 20px;
+    left: 66%;
+    top: -150px;
     z-index: 2;
-}
-.image2 {
-    height: 65%;
-    width: auto;
-    border-radius: 20px;
+
+    height: 450px;  
+    width: 450px;
+    border-radius: 50%;
+    object-fit: cover;
+
     box-shadow: 0 0 30px rgba(0, 255, 255, 0.5),
-        0 0 60px rgba(0, 255, 255, 0.3),
-        0 0 90px rgba(0, 255, 255, 0.2);
+                0 0 60px rgba(0, 255, 255, 0.3),
+                0 0 90px rgba(0, 255, 255, 0.2);
+
     animation: haloGlow 5s ease-in-out infinite;
 }
 .AboutH1 {
     text-align: center;
     font-size: 50px;
     position: relative;
-    right: 31%;
+    right: 35%;
     top: 24%;
 }
 .Abouth3 {
     text-align: center;
     font-size: 30px;
     position: relative;
-    right: 32%;
+    right: 36%;
     top: 20%;
 }
 .AboutP {
     height: 90px;
-    width: 800px;
-    text-align: justify;
+    width: 850px;
+    text-align: left;
     position: relative;
-    left: 11%;
+    left:7%;
     top: 18%;
     font-size: 25px;
+}
+.technical, .professional{
+    margin-right: 5%;
+    height: 300px;
+    width: 40%;
+    display: inline-block;
+    border:2px solid black;
+    position: relative;
+    left: 8%;
+}
+.techskill{
+    list-style-type: none;
+    padding-bottom: 5%;
+}
+.profskill{
+    list-style-type: none;
 }
