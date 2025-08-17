@@ -1,35 +1,43 @@
 section {
     height: 100vh;
 }
+
 body {
     margin-left: 1cm;
     margin-right: 1.7cm;
     background-color: rgba(4, 22, 43, 0.726);
     scroll-behavior: smooth;
+    font-family: 'Poppins';
 }
+
 .navBar {
-    margin-left: 480px;
+    margin-left: 530px;
     margin-bottom: 5%;
 }
-.homeUl{
+
+.homeUl {
     text-align: center;
     font-size: 23px;
-    margin-top: 0px;
+    margin-top: -15px;
 }
+
 .homeUl li {
     list-style-type: none;
     display: inline-block;
-    margin: 0 50px;
+    margin: 0 40px;
     position: relative;
     right: 9%;
 }
+
 .homeUl li a {
     text-decoration: none;
     color: black;
 }
+
 .homeUl li a:hover {
     color: rgb(0, 240, 44);
 }
+
 .image {
     position: absolute;
     height: 400px;
@@ -45,36 +53,42 @@ body {
         0 0 60px rgba(0, 255, 255, 0.3),
         0 0 90px rgba(0, 255, 255, 0.2);
 }
+
 @keyframes haloGlow {
     0% {
         box-shadow: 0 0 30px rgba(0, 255, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.3), 0 0 90px rgba(0, 255, 255, 0.2);
     }
+
     50% {
         box-shadow: 0 0 50px rgba(0, 255, 255, 0.7), 0 0 80px rgba(0, 255, 255, 0.5), 0 0 110px rgba(0, 255, 255, 0.3);
     }
+
     100% {
         box-shadow: 0 0 30px rgba(0, 255, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.3), 0 0 90px rgba(0, 255, 255, 0.2);
     }
 }
+
 .image {
     animation: haloGlow 5s ease-in-out infinite;
 }
-.intro{
+
+.intro {
     font-size: 50PX;
-    font-style: bold;
     display: inline;
     position: relative;
     left: 340px;
     bottom: 290px;
 }
+
 .hobie {
     font-size: 40px;
     font-style: bold;
     display: inline;
     position: relative;
-    right: 150px;
+    right: 200px;
     bottom: 216px;
 }
+
 .paragraph {
     font-size: 25px;
     height: 30px;
@@ -85,7 +99,9 @@ body {
     line-height: 1.5;
     position: relative;
     top: -200px;
+    left: 30px;
 }
+
 .hire {
     height: 40px;
     width: 100px;
@@ -93,77 +109,257 @@ body {
     line-height: 40px;
     background-color: yellow;
     position: relative;
-    left: 850px;
+    left: 870px;
     top: -10px;
     font-size: 20px;
     cursor: pointer;
     text-align: center;
     border: none;
 }
-.hire:hover{
+
+.hire:hover {
     background-color: rgb(23, 230, 23);
 }
+
 .logo {
+    font-family: 'Fredoka One';
     display: inline;
     position: relative;
     font-size: 40px;
-    font-style: oblique;
     color: rgb(239, 169, 5);
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+
 }
+
+.about-container {
+    position: relative;
+    top: 140px;
+}
+
 .aboutphoto img {
     object-position: top;
     position: relative;
-    left: 66%;
-    top: -150px;
+    left: 70%;
+    top: -490px;
     z-index: 2;
 
-    height: 450px;  
+    height: 450px;
     width: 450px;
     border-radius: 50%;
     object-fit: cover;
 
     box-shadow: 0 0 30px rgba(0, 255, 255, 0.5),
-                0 0 60px rgba(0, 255, 255, 0.3),
-                0 0 90px rgba(0, 255, 255, 0.2);
+        0 0 60px rgba(0, 255, 255, 0.3),
+        0 0 90px rgba(0, 255, 255, 0.2);
 
     animation: haloGlow 5s ease-in-out infinite;
 }
+
 .AboutH1 {
     text-align: center;
     font-size: 50px;
     position: relative;
-    right: 35%;
-    top: 24%;
+    right: 39%;
+    top: 20px;
 }
+
 .Abouth3 {
     text-align: center;
     font-size: 30px;
     position: relative;
-    right: 36%;
-    top: 20%;
+    right: 40%;
+    top: -10px;
 }
+
 .AboutP {
-    height: 90px;
-    width: 850px;
+    line-height: 1.5;
+    height: auto;
+    width: 940px;
     text-align: left;
     position: relative;
-    left:7%;
-    top: 18%;
+    left: 2%;
+    top: -40px;
     font-size: 25px;
 }
-.technical, .professional{
-    margin-right: 5%;
-    height: 300px;
-    width: 40%;
-    display: inline-block;
-    border:2px solid black;
-    position: relative;
-    left: 8%;
+
+.skill-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
 }
-.techskill{
+
+.technical {
+    margin-right: 5%;
+    height: 430px;
+    width: 50%;
+    display: inline-block;
+    border: 2px solid black;
+    position: relative;
+    left: 4%;
+    background-color: #1E1E1E;
+    padding: 5px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.professional {
+    margin-right: 5%;
+    height: 430px;
+    width: 50%;
+    display: inline-block;
+    border: 2px solid black;
+    position: relative;
+    left: 4%;
+    background-color: #1E1E1E;
+    padding: 5px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.techskill,
+.profskill {
     list-style-type: none;
     padding-bottom: 5%;
 }
-.profskill{
-    list-style-type: none;
+
+.technical h2,
+.professional h2 {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.technical ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.skills {
+    font-size: 50px;
+    text-align: center;
+    padding-top: 75px;
+}
+
+i,
+svg {
+    font-size: 60px;
+}
+
+.icon-box {
+    margin-right: 15px;
+    margin-left: 33px;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    background-color: #1E1E1E;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-box:hover {
+    background-color: rgb(5, 22, 1);
+     transform: translateY(-5px) scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.skill-name {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+
+.profskill {
+    position: relative;
+    top:-20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profskill li {
+    margin-bottom: 16px;
+}
+
+.profskill p {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-weight: 500;
+}
+
+.profskill .bar {
+    display: block;
+    height: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    /* cursor: pointer;
+     transition: transform 0.3s ease, box-shadow 0.3s ease; */
+}
+
+.bar:hover {
+    box-shadow: 0 8px 20px rgb(63, 49, 3), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transition: box-shadow 0.3s ease;
+      /* transform: translateY(-5px) scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7); */
+}
+
+.profskill .bar span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(236, 0, 140, 1)0%, rgba(232, 103, 103, 1)100%);
+    border-radius: 10px;
+}
+
+@keyframes fillBar {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--skill-width);
+    }
+}
+
+.profskill .bar span {
+    display: block;
+    height: 100%;
+    background-color: #2196F3;
+    border-radius: 10px;
+    width: 0;
+    animation: fillBar 2s forwards;
+}
+
+.Multimedia {
+    --skill-width: 80%;
+}
+
+.Fast {
+    --skill-width: 80%;
+}
+
+.Problem {
+    --skill-width: 90%;
+}
+
+.Creativity {
+    --skill-width: 83%;
+}
+
+.Team {
+    --skill-width: 90%;
 }
