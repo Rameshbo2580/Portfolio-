@@ -2,14 +2,19 @@ section {
     height: 100vh;
 }
 
+* {
+    color: white;
+}
+
 body {
     margin-left: 1cm;
     margin-right: 1.7cm;
-    background-color: rgba(4, 22, 43, 0.726);
+    background-color: #0D1B2A;
     scroll-behavior: smooth;
     font-family: 'Poppins';
 }
 
+/* -------------------->Home page<-------------------- */
 .navBar {
     margin-left: 530px;
     margin-bottom: 5%;
@@ -31,45 +36,30 @@ body {
 
 .homeUl li a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .homeUl li a:hover {
-    color: rgb(0, 240, 44);
+    color: #00CFFF;
+    text-decoration: underline;
 }
 
 .image {
-    position: absolute;
+    position: relative;
     height: 400px;
     width: auto;
-    display: inline-block;
-    position: relative;
     left: 10%;
     top: 50px;
     border-radius: 20px;
     z-index: 2;
 
-    box-shadow: 0 0 30px rgba(0, 255, 255, 0.5),
-        0 0 60px rgba(0, 255, 255, 0.3),
-        0 0 90px rgba(0, 255, 255, 0.2);
-}
-
-@keyframes haloGlow {
-    0% {
-        box-shadow: 0 0 30px rgba(0, 255, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.3), 0 0 90px rgba(0, 255, 255, 0.2);
-    }
-
-    50% {
-        box-shadow: 0 0 50px rgba(0, 255, 255, 0.7), 0 0 80px rgba(0, 255, 255, 0.5), 0 0 110px rgba(0, 255, 255, 0.3);
-    }
-
-    100% {
-        box-shadow: 0 0 30px rgba(0, 255, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.3), 0 0 90px rgba(0, 255, 255, 0.2);
-    }
+    box-shadow: 0 0 15px rgba(14, 231, 231, 0.4),
+        0 0 25px rgba(6, 243, 243, 0.3),
+        0 0 35px rgba(7, 235, 235, 0.2);
 }
 
 .image {
-    animation: haloGlow 5s ease-in-out infinite;
+    animation: haloGlow 10s ease-in-out infinite;
 }
 
 .intro {
@@ -107,7 +97,8 @@ body {
     width: 100px;
     border-radius: 20px;
     line-height: 40px;
-    background-color: yellow;
+    background-color: #00CFFF;
+    color: black;
     position: relative;
     left: 870px;
     top: -10px;
@@ -118,7 +109,9 @@ body {
 }
 
 .hire:hover {
-    background-color: rgb(23, 230, 23);
+    background-color: gold;
+    display: block;
+    filter: drop-shadow(0 0 10px #fffdef);
 }
 
 .logo {
@@ -132,35 +125,66 @@ body {
 
 }
 
+/* -------------------->About page<-------------------- */
 .about-container {
     position: relative;
     top: 140px;
 }
 
-.aboutphoto img {
-    object-position: top;
+.aboutphoto {
     position: relative;
     left: 70%;
-    top: -490px;
-    z-index: 2;
-
-    height: 450px;
+    top: -520px;
     width: 450px;
-    border-radius: 50%;
+    height: 500px;
+    z-index: 2;
+}
+
+.hexagon-glow {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.8)) drop-shadow(0 0 40px rgba(0, 200, 255, 0.6)) drop-shadow(0 0 60px rgba(0, 150, 255, 0.4));
+    animation: haloGlow 3s ease-in-out infinite;
+    padding: 10px;
+}
+
+.hexagon {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+    background: rgb(3, 178, 209);
+    z-index: 1;
+    transform: translateZ(0);
+}
+
+@keyframes haloGlow {
+    from {
+        filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.8)) drop-shadow(0 0 40px rgba(0, 200, 255, 0.6)) drop-shadow(0 0 60px rgba(0, 150, 255, 0.4));
+    }
+
+    to {
+        filter: drop-shadow(0 0 30px rgba(0, 255, 255, 1)) drop-shadow(0 0 60px rgba(0, 200, 255, 0.8)) drop-shadow(0 0 90px rgba(0, 150, 255, 0.6));
+    }
+}
+
+.hexagon img.inside {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-
-    box-shadow: 0 0 30px rgba(0, 255, 255, 0.5),
-        0 0 60px rgba(0, 255, 255, 0.3),
-        0 0 90px rgba(0, 255, 255, 0.2);
-
-    animation: haloGlow 5s ease-in-out infinite;
+    object-position: top;
+    position: relative;
+    top: 30px;
+    left: 5%;
 }
 
 .AboutH1 {
     text-align: center;
-    font-size: 50px;
+    font-size: 53px;
     position: relative;
-    right: 39%;
+    right: 38%;
     top: 20px;
 }
 
@@ -168,8 +192,8 @@ body {
     text-align: center;
     font-size: 30px;
     position: relative;
-    right: 40%;
-    top: -10px;
+    right: 39%;
+    top: -30px;
 }
 
 .AboutP {
@@ -178,11 +202,12 @@ body {
     width: 940px;
     text-align: left;
     position: relative;
-    left: 2%;
-    top: -40px;
+    left: 3%;
+    top: -50px;
     font-size: 25px;
 }
 
+/* -------------------->Skill page<-------------------- */
 .skill-container {
     display: flex;
     justify-content: space-between;
@@ -196,10 +221,11 @@ body {
     height: 430px;
     width: 50%;
     display: inline-block;
-    border: 2px solid black;
+    border: 4px solid black;
     position: relative;
     left: 4%;
-    background-color: #1E1E1E;
+    top: 40px;
+    background-color: #00CFFF;
     padding: 5px;
     box-sizing: border-box;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
@@ -213,7 +239,8 @@ body {
     border: 2px solid black;
     position: relative;
     left: 4%;
-    background-color: #1E1E1E;
+    top: 40px;
+    background-color: #00CFFF;
     padding: 5px;
     box-sizing: border-box;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
@@ -223,11 +250,12 @@ body {
 .profskill {
     list-style-type: none;
     padding-bottom: 5%;
+
 }
 
 .technical h2,
 .professional h2 {
-    color: white;
+    color: black;
     font-size: 30px;
     text-align: center;
     cursor: pointer;
@@ -239,10 +267,27 @@ body {
     gap: 40px;
 }
 
+.skills-heading {
+    display: flex;
+    align-items: flex-end;
+    gap: 30px;
+    position: relative;
+    left: 4%;
+    padding-top: 75px;
+}
+
 .skills {
     font-size: 50px;
-    text-align: center;
-    padding-top: 75px;
+    margin: 0;
+    padding: 0;
+}
+
+.skills-subtitle {
+    font-size: 30px;
+    color: white;
+    display: inline-block;
+    position: relative;
+    top: -10px;
 }
 
 i,
@@ -267,8 +312,8 @@ svg {
 }
 
 .icon-box:hover {
-    background-color: rgb(5, 22, 1);
-     transform: translateY(-5px) scale(1.05); 
+    background-color: rgb(11, 53, 2);
+    transform: translateY(-5px) scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
 }
 
@@ -276,12 +321,12 @@ svg {
     display: block;
     text-align: center;
     font-size: 16px;
-    color: white;
+    color: black;
 }
 
 .profskill {
     position: relative;
-    top:-20px;
+    top: -20px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -295,7 +340,7 @@ svg {
     margin: 0 0 5px 0;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
-    color: #fff;
+    color: black;
     font-weight: 500;
 }
 
@@ -307,15 +352,15 @@ svg {
     width: 100%;
     box-sizing: border-box;
     overflow: hidden;
-    /* cursor: pointer;
-     transition: transform 0.3s ease, box-shadow 0.3s ease; */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .bar:hover {
     box-shadow: 0 8px 20px rgb(63, 49, 3), 0 10px 10px rgba(0, 0, 0, 0.22);
     transition: box-shadow 0.3s ease;
-      /* transform: translateY(-5px) scale(1.05); 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7); */
+    transform: translateY() scale(1.05);
+    box-shadow: 0 10px 20px rgba(233, 35, 17, 0.7);
 }
 
 .profskill .bar span {
@@ -362,4 +407,274 @@ svg {
 
 .Team {
     --skill-width: 90%;
+}
+
+/* -------------------->Project page<-------------------- */
+.project-container li {
+    list-style-type: none;
+    position: relative;
+}
+
+.project-container h1 {
+    font-size: 50px;
+    position: relative;
+    left: 4%;
+    bottom: -50px;
+}
+
+.project-card {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    height: 300px;
+    width: 30%;
+    position: relative;
+    left: 4%;
+    border-radius: 15px;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background:
+        linear-gradient(90deg, rgba(12, 12, 12, 0.96) 0%, rgba(4, 22, 43, 0.96) 45%, rgb(255, 255, 255) 50%, rgba(3, 3, 3, 0.96) 55%, rgba(11, 12, 12, 0.96) 100%),
+        linear-gradient(180deg, rgba(4, 22, 43, 0.96) 0%, rgba(4, 22, 43, 0.96) 45%, rgb(80, 85, 150) 50%, rgba(4, 22, 43, 0.96) 55%, rgba(22, 22, 22, 0.96) 100%);
+    border-radius: 20px;
+    animation: rotate 9s linear infinite;
+    z-index: -2;
+}
+
+.project-card::after {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    background-color: #00CFFF;
+    border-radius: 12px;
+    z-index: -1;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.project-card p {
+    color: black;
+    justify-content: left;
+    position: relative;
+    left: 2%;
+
+}
+
+.project-card h3 {
+    font-size: 25px;
+    color: black;
+    text-align: center;
+    text-decoration: dotted;
+    position: relative;
+    top: -10px;
+}
+
+.project_para {
+    margin: 0;
+    padding: 0;
+    height: 49px;
+    width: 90%;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    position: relative;
+    left: 5%;
+    top: -29px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.project_para * {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+
+.project-card img {
+    height: 130px;
+    width: 45%;
+    border: 5px solid rgb(255, 248, 240);
+    position: relative;
+    left: 26%;
+    top: -30px
+}
+
+a {
+    text-decoration: none;
+}
+
+.project-card button {
+
+    height: 30px;
+    width: 20%;
+    background-color: gold;
+    color: black;
+    font-size: 18px;
+    position: relative;
+    left: 40%;
+    top: -29px;
+    text-align: center;
+    line-height: 30px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+
+}
+
+.project-card button:hover {
+    display: block;
+    filter: drop-shadow(0 0 10px #fffdef);
+}
+
+/* ------------------->Contact page<-------------------- */
+.socials-container{
+    display: flex;
+    gap: 20px;
+}
+
+.socials-container a{
+    background-color: white;
+    padding: 1em;
+    border-radius: 50%;
+    height: 64px;
+    width: 64px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.socials-container a svg{
+    height: 32px;
+}
+
+.socials-container a::before{
+    content: attr(data-social);
+    position: absolute;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 100px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+    transform: translateY(-30px) rotate(25deg);
+    opacity: 0;
+    transition: 200ms cubic-bezier(.42,0,.44,1.68);
+    pointer-events: none; /* FIX: prevents tooltip from appearing on form focus */
+}
+
+.socials-container a::after{
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid var(--accent-color);
+    transform: translateY(0) rotate(25deg);
+    opacity: 0;
+    transition: 200ms cubic-bezier(.42,0,.44,1.68);
+    pointer-events: none; /* FIX: prevents tooltip from appearing on form focus */
+}
+
+.socials-container a:hover{
+    background-color: var(--accent-color);
+    fill: white;
+}
+
+.socials-container a:hover::before{
+    transform: translateY(-65px) rotate(0);
+    opacity: 1;
+}
+
+.socials-container a:hover::after{
+    transform: translateY(-42px) rotate(0);
+    opacity: 1;
+}
+
+.form {
+    background-color: white;
+    margin-top: 5ch;
+    margin-left: 50%;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    width: 350px;
+}
+
+.formfill, .formfill1, .formfill2, .formfill3 {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formfill label,
+.formfill1 label,
+.formfill2 label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.formfill input,
+.formfill1 input,
+.formfill2 textarea {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.formfill input:focus,
+.formfill1 input:focus,
+.formfill2 textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.formfill2 textarea {
+    color: black;
+    resize: vertical;
+    min-height: 80px;
+}
+
+.formfill3 button {
+    padding: 12px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.formfill3 button:hover {
+    background-color: #45a049;
+}
+#Contact h1{
+    font-size: 50px;
 }
