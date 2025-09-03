@@ -34,7 +34,7 @@
     <section id="Home">
         <div class="main">
             <img class="image" src="../images/diliporg.png" alt="">
-            <h1 class="intro">Hi, I'm Dilip Kumar Bohora!</h1>
+            <h1 class="intro">Hi, I'm <span class="NameEffect">Dilip Kumar Bohora!</span></h1>
             <h2 class="hobie">Full Stack Developer</h2>
             <p class="paragraph">Welcome to my portfolio! I am a motivated learner with a strong passion for web
                 development. I enjoy creating clean, functional, and visually appealing projects while continuously
@@ -243,10 +243,16 @@
     <section id="Contact">
         <h1>Contact Me</h1>
         <div class="Contact_Container">
+            <div class="social-paragraph">
+                <p>
+                    I’d love to connect with you! You can reach me through the platforms below for
+                    collaborations, projects, or just a quick chat. Feel free to drop me a message anytime.
+                </p>
+            </div>
             <!-- Social Icons -->
             <div class="socials-container">
                 <a data-social="Facebook" style="--accent-color: #106bff;"
-                    href="https://www.facebook.com/share/15C17vnZ5o/">
+                    href="https://www.facebook.com/share/15C17vnZ5o/" target="_blank">
                     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <title>Facebook</title>
                         <path
@@ -255,7 +261,7 @@
                 </a>
 
                 <a data-social="Instagram" style="--accent-color: #fe107c;"
-                    href="https://www.instagram.com/ramesshbohora?igsh=Mjd2aTJ1NHA2YmR6">
+                    href="https://www.instagram.com/ramesshbohora?igsh=Mjd2aTJ1NHA2YmR6" target="_blank">
                     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <title>Instagram</title>
                         <path
@@ -263,7 +269,8 @@
                     </svg>
                 </a>
 
-                <a data-social="GitHub" style="--accent-color: black;" href="https://github.com/Rameshbo2580">
+                <a data-social="GitHub" style="--accent-color: black;" href="https://github.com/Rameshbo2580"
+                    target="_blank">
                     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <title>GitHub</title>
                         <path
@@ -272,37 +279,62 @@
                 </a>
 
                 <a data-social="LinkedIn" style="--accent-color: #0077B5;"
-                    href="https://www.linkedin.com/in/dilip-kumar-bohora-40325b365?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                    href="https://www.linkedin.com/in/dilip-kumar-bohora-40325b365?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    target="_blank">
                     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <title>LinkedIn</title>
                         <path
                             d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.851-3.037-1.853 0-2.136 1.446-2.136 2.939v5.667H9.351V9h3.414v1.561h.049c.476-.899 1.637-1.849 3.37-1.849 3.602 0 4.27 2.37 4.27 5.456v6.284zM5.337 7.433a2.065 2.065 0 1 1 0-4.132 2.065 2.065 0 0 1 0 4.132zm1.777 13.019H3.561V9h3.553v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.728v20.543C0 23.228.792 24 1.771 24h20.451C23.2 24 24 23.228 24 22.271V1.728C24 .774 23.2 0 22.225 0z" />
                     </svg>
-                </a>
+                    <a data-social="Gmail" style="--accent-color: #D44638;"
+                        href="https://mail.google.com/mail/?view=cm&to=rameshbohora4578@gmail.com" target="_blank">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <title>Gmail</title>
+                            <path d="M24 4.5v15c0 1.5-1.5 3-3 3H3c-1.5 0-3-1.5-3-3v-15C0 3 1.5 1.5 3 1.5h18c1.5 0 3 1.5 3 3zm-3 
+                                    0l-9 6.75L3 4.5h18zM3 19.5h18v-12l-9 6.75L3 7.5v12z" />
+                        </svg>
+                    </a>
+
+
+
             </div>
 
             <!-- Contact Form -->
             <div class="form">
-                <div class="formfill">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name">
-                </div>
+                <form action="backend.php" method="post">
+                    <div class="formfill">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
 
-                <div class="formfill1">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email">
-                </div>
+                    <div class="formfill1">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
 
-                <div class="formfill2">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" placeholder="Type your message"></textarea>
-                </div>
+                    <div class="formfill2">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" placeholder="Type your message" required></textarea>
+                    </div>
 
-                <div class="formfill3">
-                    <button type="submit">Submit</button>
-                </div>
+                    <div class="formfill3">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
             </div>
+
         </div>
+        <!-- Ai Button here -->
+        <span class="aibot">
+            <a data-social="DBot" href="../Html/aIbutton.html" id="aiButton">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <title>AI Chat</title>
+                    <path
+                        d="M12 .04a1.743 1.743 0 0 0-.537 3.401l-.631 2.579H2.456A2.456 2.456 0 0 0 0 8.476v13.029a2.456 2.456 0 0 0 2.456 2.456h19.088c1.356 0 2.456-1.1 2.456-2.456V8.476c0-1.356-1.1-2.456-2.456-2.456h-8.403l-.616-2.575A1.743 1.743 0 0 0 11.999.04zM3.933 7.881h16.136c1.101 0 1.994.893 1.994 1.994v10.117a1.994 1.994 0 0 1-1.994 1.994H3.933a1.994 1.994 0 0 1-1.994-1.994V9.875c0-1.101.893-1.994 1.994-1.994zm3.254 2.312a4.575 4.575 0 1 0 0 9.15 4.575 4.575 0 0 0 0-9.15zm9.743 0a4.575 4.575 0 1 0 0 9.15 4.575 4.575 0 0 0 0-9.15z" />
+                </svg>
+            </a>
+        </span>
+
     </section>
 </body>
 

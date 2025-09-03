@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio AI Assistant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../Style/aIbutton.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>Dbot</h1>
+            <p>Ask me anything about my skills, experience, or projects</p>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot-message">
+                Hello! I'm your portfolio AI assistant. I can answer questions about your skills, experience, projects, and more. How can I help you today?
+                <div class="suggestion-chips">
+                    <div class="suggestion-chip" data-question="What are your skills?">Skills</div>
+                    <div class="suggestion-chip" data-question="Tell me about your experience">Experience</div>
+                    <div class="suggestion-chip" data-question="What projects have you worked on?">Projects</div>
+                </div>
+                <div class="timestamp">Just now</div>
+            </div>
+        </div>
+        <div class="typing-indicator" id="typing-indicator">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="chat-input-container">
+            <input type="text" id="user-input" placeholder="Ask about my portfolio...">
+            <button id="send-button">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+    <script src="../Script/aibot.js"></script>
+</body>
+</html> 
